@@ -59,7 +59,7 @@ eachHourDf = stazioneDf.select(["data_ora","wind_speed_media","temp1_media","rad
     withColumnRenamed('avg(rad W/mq)','Rs').withColumnRenamed('avg(temp1_media)','T')\
     .withColumnRenamed('avg(ur1_media)','RH').withColumnRenamed('avg(wind_speed_media)','u2')
 
-eachHourDf = eachHourDf.select('giorno','ora','RH','Rs','u2','T')
+eachHourDf = eachHourDf.select('data','ora','RH','Rs','u2','T')
 
 #La radiazione solare viene convertita in MJ/day che e' l'unita di misura richiesta per la formula di Valiantzas
 eachHourDf = eachHourDf.withColumn('Rs',eachHourDf['Rs']*0.0864)
