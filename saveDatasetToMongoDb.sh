@@ -1,4 +1,5 @@
 #!/bin/bash
+python3 csv_to_json_converter.py
 sudo docker cp ./data/nodi.json mongodb:/nodi.json
 sudo docker cp ./data/stazione.json mongodb:/stazione.json
 sudo docker exec -it mongodb mongoimport --file nodi.json --db pantheon --collection nodes --jsonArray --username root --password mongodb --authenticationDatabase admin
