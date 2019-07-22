@@ -4,12 +4,12 @@ services:
   pyspark:
     image: jupyter/all-spark-notebook:latest
     container_name: jupyter_pyspark
-    working_dir: /home/code
+    working_dir: /home/jovyan/work
     ports:
     - 8888:8888/tcp
     - 4040:4040/tcp
     volumes:
-    - ./job:/home/code
+    - ./job:/home/jovyan/work
 
   mongo:
     image: mongo
