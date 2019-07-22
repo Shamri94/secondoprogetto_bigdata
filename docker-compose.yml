@@ -37,6 +37,7 @@ services:
     restart: always
     environment:
       POSTGRES_PASSWORD: password
+      POSTGRES_DB : report
     
   adminer:
     image: adminer
