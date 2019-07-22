@@ -15,4 +15,4 @@ avendo i file salvati nella repository nella cartella **data** quindi non presen
 Per poter usare Jupyter bisogna controllare la console di Docker e cercare nel log il token di accesso, dopodiché basta entrare sul 
 browser su **localhost:8888**.
 Per poter interagire su Postgres basta andare sull'URL **localhost:8085** e specificare come server _postgres_ che è il nome di
-dominio del container con Postgres.Lo username  è _postgres_ e la password _password_. Bisogna creare un database di nome **report** per poi poter eseguire i notebook e salvare i risultati
+dominio del container con Postgres.Lo username  è _postgres_ e la password _password_. Grazie alla variabile di ambiente **POSTGRES_DB** viene creato nel container di postgres un database **report** per poi poter eseguire i notebook e salvare i risultati
